@@ -13,6 +13,9 @@ display_height = 700
 display = pygame.display.set_mode((display_width,display_height))
 
 while Running:
+    display.fill((0,0,0))
+    pygame.draw.rect(display, (255,255,255), pygame.Rect(200,200,200,200),2)
+    pygame.display.update()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT or pygame.key.get_pressed()[pygame.K_ESCAPE]:

@@ -4,12 +4,12 @@ class Hombre:
         self.settlement = None
         self.home = None
         # Person Attributes:
-        self.names = self.fetch_random_name() # Also need to acount for lineage and passing down of last names
+        self.names = self.fetch_random_name() # Also need to account for lineage and passing down of last names
         self.weight = 100
-        self.socialClass = 0
+        self.social_class = 0
         self.wealth = 0
         self.family = None
-        # Profesion Attributes:
+        # Profession Attributes:
         self.job = None
         self.skills = None
         self.employer = None
@@ -28,7 +28,8 @@ class Settlement:
         self.num_building = 0
         self.buildings = []
 
-class building:
+class Building:
     def __init__(self):
         self.type = None
-        self.name - self.type.name
+        self.name = self.type.name
+
