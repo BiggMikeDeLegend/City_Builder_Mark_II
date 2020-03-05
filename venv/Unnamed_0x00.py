@@ -22,7 +22,7 @@ class Hombre:
     def get_social_class(self):
         pass
         # Combine lineage and wealth (Potentially other factors)
-        # Calculate for citizens that have seen net Finance sifts of over some number to cut down computatoins for larger cities
+        # Calculate for citizens that have seen net Finance sifts of over some number to cut down computations for larger cities
 
 
 class Settlement:
@@ -39,14 +39,14 @@ class Building:
         self.type = None
         self.name = self.type.name
 
-# Enstansiate some form of currency standerds rate system, could be based on a gold standerd and would need conversion rates.
+# Instantiate some form of currency standards rate system, could be based on a gold standard and would need conversion rates.
 
-# Cities once out of periphery will opperate as systems following the projections of growth or decline from the previous years
+# Cities once out of periphery will operate as systems following the projections of growth or decline from the previous years
 # with some injections of random events.
 
-# Create a vast intertwined global stage in which events that happen in other cities affect the proggersion of other cities
+# Create a vast intertwined global stage in which events that happen in other cities affect the progression of other cities
 
 # Time period: Dawn of the 20th century
 # Electricity
-# Ending of Tradional Warfare : Introducion of Geurilla Warfare
-# Railrods for intrenational comerce
+# Ending of Traditional Warfare : Introduction of Guerrilla Warfare
+# Railroads for international commerce
