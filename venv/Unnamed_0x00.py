@@ -6,24 +6,32 @@ class Hombre:
         # Person Attributes:
         self.names = self.fetch_random_name() # Also need to account for lineage and passing down of last names
         self.weight = 100
-        self.social_class = 0
+        self.status = self.get_status()
         self.wealth = 0
         self.family = None
         # Profession Attributes:
         self.job = None
         self.skills = None
         self.employer = None
+        # Live Simulation Attributes:
+        self.pos = [0,0]
+        self.vel = [0,0]
+        self.current_destination = None
+        self.load_capacity = 0
+        self.load_type = None
+
+    def fetch_status(self, status:int):
+        # Combine lineage and wealth (Potentially other factors)
+        # Calculate for citizens that have seen net Finance sifts of over some number to cut down computations for larger cities
+        return status
+
+    def fetch_lineage(self):
+        pass
 
     @staticmethod
     def fetch_random_name():
         names = ["Freddie", "Earl", "Carmichael"]
         return names
-
-    def get_social_class(self):
-        pass
-        # Combine lineage and wealth (Potentially other factors)
-        # Calculate for citizens that have seen net Finance sifts of over some number to cut down computations for larger cities
-
 
 class Settlement:
     def __init__(self):
