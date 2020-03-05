@@ -9,7 +9,7 @@ pygame.display.set_caption("Unnamed Program")
 
 display_width = 700
 display_height = 700
-
+# does this work
 display = pygame.display.set_mode((display_width,display_height))
 
 while Running:
