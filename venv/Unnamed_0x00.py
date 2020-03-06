@@ -71,19 +71,33 @@ class Building:
         self.name = self.type.name
 
     class Industrial:
-        def __init__(self):
+        class Quarry:
+            def __init__(self):
+                pass
+            # Different materials a Quarry can harvest include Limestone, Granite, Marble
+        class Forester:
+            def __init__(self):
+                pass
+            # Different materials a Forester can harvest include Oak, Birch, Pine,
+
+        class Mine:
             pass
 
-        class Test:
-            def __init__(self, test:int):
-                self.test = test
-
-    class Residential:
-        def __init__(self):
+        class Rig:
             pass
+
+        class Factory:
+            pass
+
+        class Construction:
+            class Crane:
+                pass
 
     class Agricultural:
-        def __init__(self):
+        class Field:
+            pass
+
+        class Orcard:
             pass
 
     class Governmental:
@@ -94,6 +108,19 @@ class Building:
         def __init__(self):
             pass
 
+    class Infastructure:
+        class Hydro:
+            pass
+
+        class Electrical:
+            pass
+
+        class GeneralInfastructure:
+            pass
+
+    class Asthetics:
+        class Park:
+            pass
 # Instantiate some form of currency standards rate system, could be based on a gold standard and would need conversion
 # rates.
 
