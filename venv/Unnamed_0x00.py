@@ -1,4 +1,4 @@
-class Hombre:
+class Person:
     def __init__(self):
         # General Attributes:
         self.settlement = None
@@ -46,6 +46,29 @@ class Building:
     def __init__(self):
         self.type = None
         self.name = self.type.name
+
+    class Industrial:
+        def __init__(self):
+            pass
+
+        class Test:
+            def __init__(self, test:int):
+                self.test = test
+
+    class Residential:
+        pass
+
+    class Agricultural:
+        pass
+
+    class Governmental:
+        pass
+
+    class Commercial:
+        pass
+
+Test_object = Building.Industrial.Test(1)
+print(Test_object.test)
 
 # Instantiate some form of currency standards rate system, could be based on a gold standard and would need conversion rates.
 
