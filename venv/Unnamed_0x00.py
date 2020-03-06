@@ -1,3 +1,5 @@
+import random
+
 class Person:
     def __init__(self):
         # General Attributes:
@@ -5,33 +7,53 @@ class Person:
         self.home = None
         # Person Attributes:
         self.names = self.fetch_random_name() # Also need to account for lineage and passing down of last names
+        self.gender = None
         self.weight = 100
         self.status = self.get_status()
-        self.wealth = 0
         self.family = None
         # Profession Attributes:
         self.job = None
         self.skills = None
         self.employer = None
+        # Financial Attributes:
+        self.net_monetary_funds = 0
+        self.properties = None
         # Live Simulation Attributes:
         self.pos = [0,0]
         self.vel = [0,0]
         self.current_destination = None
         self.load_capacity = 0
         self.load_type = None
+        self.rng_seed = self.generate_rng_seed()
 
-    def fetch_status(self, status:int):
+    def fetch_status(self):
+        status = self.net_monetary_funds * self.appraise_propetry() * self.fetch_lineage()
         # Combine lineage and wealth (Potentially other factors)
-        # Calculate for citizens that have seen net Finance sifts of over some number to cut down computations for larger cities
+        # Calculate for citizens that have seen net Finance sifts of over some number to cut down computations for
+        # larger cities
         return status
 
-    def fetch_lineage(self):
-        pass
+    def appraise_property(self):
+        temp_value = 0
+        if self.properties is not None:
+            for property in self.properties:
+                temp_value += property.current_value
+        return temp_value
 
-    @staticmethod
-    def fetch_random_name():
+    def fetch_lineage(self):
+        return int
+
+    def fetch_random_name(self):
+        rng_seed = self.rng_seed
         names = ["Freddie", "Earl", "Carmichael"]
         return names
+
+    @staticmethod
+    def generate_rng_see():
+        rng_seed_length = 3
+        rList = [random.randint(0, 255) for i in range(rng_seed_length)]
+        return bytes(rList)
+
 
 class Settlement:
     def __init__(self):
@@ -41,6 +63,7 @@ class Settlement:
         self.people = None
         self.num_building = 0
         self.buildings = []
+
 
 class Building:
     def __init__(self):
@@ -56,28 +79,32 @@ class Building:
                 self.test = test
 
     class Residential:
-        pass
+        def __init__(self):
+            pass
 
     class Agricultural:
-        pass
+        def __init__(self):
+            pass
 
     class Governmental:
-        pass
+        def __init__(self):
+            pass
 
     class Commercial:
-        pass
+        def __init__(self):
+            pass
 
-Test_object = Building.Industrial.Test(1)
-print(Test_object.test)
+# Instantiate some form of currency standards rate system, could be based on a gold standard and would need conversion
+# rates.
 
-# Instantiate some form of currency standards rate system, could be based on a gold standard and would need conversion rates.
+# Cities once out of periphery will operate as systems following the projections of growth or decline from the previous
+# years with some injections of random events.
 
-# Cities once out of periphery will operate as systems following the projections of growth or decline from the previous years
-# with some injections of random events.
-
-# Create a vast intertwined global stage in which events that happen in other cities affect the progression of other cities
+# Create a vast intertwined global stage in which events that happen in other cities affect the progression of other
+# cities.
 
 # Time period: Dawn of the 20th century
 # Electricity
 # Ending of Traditional Warfare : Introduction of Guerrilla Warfare
 # Railroads for international commerce
+# Steam Ships / Sailboats?
